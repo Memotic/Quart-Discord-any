@@ -22,7 +22,6 @@ requirements = [
     'oauthlib',
     'Async-OAuthlib',
     'cachetools',
-    'discord.py',
 ]
 
 
@@ -34,14 +33,23 @@ if on_rtd:
 extra_requirements = {
     'docs': [
         'sphinx==1.8.3'
+    ],
+    'discod.py': [
+        'discord.py==1.7.3'
+    ],
+    'pycord': [
+        'py-cord @ git+https://github.com/Pycord-Development/pycord/'
+    ],
+    'nextcord': [
+        'nextcord ^= 2.0.0'
     ]
 }
 
 
 setup(
-    name='Quart-Discord',
+    name='Quart-Discord-any',
     version=__get_version(),
-    url='https://github.com/jnawk/Quart-Discord',
+    url='https://github.com/Memotic/Quart-Discord-any',
     license='MIT',
     author='Philip Dowie',
     author_email='philip@jnawk.nz',

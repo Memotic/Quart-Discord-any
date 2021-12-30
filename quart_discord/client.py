@@ -1,7 +1,11 @@
 import jwt
 import typing
 import asyncio
-import discord
+
+try:
+    import discord  # For py-cord and discord.py
+except ImportError:
+    import nextcord as discord  # For nextcord
 
 from . import configs, _http, models, utils, exceptions
 
@@ -235,7 +239,7 @@ class DiscordOAuth2Session(_http.DiscordOAuth2HttpClient):
         Parameters
         ----------
         use_cache : bool, optional
-            can be set to False to avoid using the cache.  
+            can be set to False to avoid using the cache.
 
         Returns
         -------

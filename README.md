@@ -1,14 +1,28 @@
 # Quart-Discord
 [![PyPI](https://img.shields.io/pypi/v/Quart-Discord?style=for-the-badge)](https://pypi.org/project/Quart-Discord/) [![Read the Docs](https://img.shields.io/readthedocs/quart-discord?style=for-the-badge)](https://quart-discord.readthedocs.io/en/latest/) 
 
-Discord OAuth2 extension for Quart.
+Discord OAuth2 extension for Quart using py-cord, nextcord, or the deprecated discord.py.
 
 
 ### Installation
-To install current latest release you can use following command:
+To install current latest release use one of the following commands:
+
+For py-cord: (My recommendation)
 ```sh
-python3 -m pip install Quart-Discord
+python3 -m pip install Quart-Discord-any[pycord]
 ```
+
+For nextcord:
+```sh
+python3 -m pip install Quart-Discord-any[nextcord]
+```
+
+For the deprecated discord.py:
+```sh
+python3 -m pip install Quart-Discord-any[discord.py]
+```
+
+# You _MUST_ install one of the extras!
 
 
 ### Basic Example

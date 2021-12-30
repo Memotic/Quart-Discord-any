@@ -1,7 +1,12 @@
-from .base import DiscordModelsBase
 from quart import current_app
 
-import discord
+from .base import DiscordModelsBase
+
+try:
+    import discord  # For py-cord and discord.py
+except ImportError:
+    import nextcord as discord  # For nextcord
+
 from .. import configs
 
 
