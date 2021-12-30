@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Quart-Discord's documentation!
+Welcome to Quart-Discord-any's documentation!
 =========================================
 
 .. image:: /images/background.jpg
@@ -19,6 +19,13 @@ Discord's OAuth2 API easier.
 - Supports various discord models and objects.
 - An internal smart caching layer to increase the performance.
 
+**Differences to the original Quart-Discord**
+
+As of right now `Quart-Discord <https://github.com/jnawk/Quart-Discord>`_ requires discord.py which is no longer maintained, but has two popular forks: py-cord and nextcord.
+
+Other forks of Quart-Discord support py-cord and nextcord, respectively, but are different packages.
+
+This fork aims to add support for all three Discord libraries by using the "extras" functionality
 
 Contents
 --------

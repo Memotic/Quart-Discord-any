@@ -2,7 +2,7 @@
 Quart-Discord
 -------------
 
-An Discord OAuth2 quart extension.
+An Discord OAuth2 quart extension using modern .
 """
 
 import re
@@ -24,6 +24,8 @@ requirements = [
     'cachetools',
 ]
 
+with open("README.md") as fh:
+    long_description = fh.read()
 
 on_rtd = os.getenv('READTHEDOCS') == 'True'
 if on_rtd:
@@ -35,7 +37,7 @@ extra_requirements = {
         'sphinx==1.8.3'
     ],
     'discod.py': [
-        'discord.py==1.7.3'
+        'discord.py'
     ],
     'pycord': [
         'py-cord @ git+https://github.com/Pycord-Development/pycord/'
@@ -53,8 +55,11 @@ setup(
     license='MIT',
     author='Philip Dowie',
     author_email='philip@jnawk.nz',
-    description='Discord OAuth2 extension for Quart.',
-    long_description=__doc__,
+    maintainer="William Hatcher",
+    maintainer_email="william@memotic.net",
+    description='Discord OAuth2 extension for Quart using modern Discord Libraries.',
+    long_description=long_description,
+    long_description_content_type="text/markdown",
     packages=find_packages(),
     zip_safe=False,
     include_package_data=True,
@@ -66,8 +71,9 @@ setup(
         'Intended Audience :: Developers',
         'License :: OSI Approved :: MIT License',
         'Operating System :: OS Independent',
-        'Programming Language :: Python',
+        "Programming Language :: Python :: 3"
         'Topic :: Internet :: WWW/HTTP :: Dynamic Content',
         'Topic :: Software Development :: Libraries :: Python Modules'
-    ]
+    ],
+    python_requires='>=3.8',
 )

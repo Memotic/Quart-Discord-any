@@ -29,15 +29,25 @@ Requirements
 Installing
 ----------
 
-You can install Quart-Discord directly from PyPI using PIP and following command
-in shell or command prompt: ::
+You can install Quart-Discord directly from PyPI using one of the following:
 
-    python3 -m pip install -U Quart-Discord
+For py-cord: (My recommendation):::
+
+    python3 -m pip install Quart-Discord-any[pycord]
+
+For nextcord: ::
+
+    python3 -m pip install Quart-Discord-any[nextcord]
+
+For the deprecated discord.py: ::
+
+    python3 -m pip install Quart-Discord-any[discord.py]
 
 You can also install the latest development version (**maybe unstable/broken**) by
 using following command: ::
 
-    python3 -m pip install -U git+https://github.com/jnawk/Quart-Discord.git
+    python3 -m pip install -U git+https://github.com/Memotic/Quart-Discord-any
+
 
 
 Basic Usage
