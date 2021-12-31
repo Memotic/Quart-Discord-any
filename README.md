@@ -19,7 +19,7 @@ python3 -m pip install Quart-Discord-any[nextcord]
 
 For the deprecated discord.py:
 ```sh
-python3 -m pip install Quart-Discord-any[discord.py]
+python3 -m pip install Quart-Discord-any[discordpy]
 ```
 
 # You _MUST_ install one of the extras!
@@ -84,7 +84,6 @@ For an example to the working application, check [`test_app.py`](tests/test_app.
 * Quart
 * Async-OAuthlib
 * cachetools
-* discord.py
 
 
 ### Documentation

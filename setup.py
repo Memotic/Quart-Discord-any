@@ -33,18 +33,10 @@ if on_rtd:
     requirements.append('Pallets-Sphinx-Themes')
 
 extra_requirements = {
-    'docs': [
-        'sphinx==1.8.3'
-    ],
-    'discod.py': [
-        'discord.py'
-    ],
-    'pycord': [
-        'py-cord @ git+https://github.com/Pycord-Development/pycord/'
-    ],
-    'nextcord': [
-        'nextcord ^= 2.0.0'
-    ]
+    'docs': ['sphinx==1.8.3'],
+    'discodpy': ['discord.py'],
+    'pycord': ['py-cord'],
+    'nextcord': ['nextcord == 2.0.0']
 }
 
 
@@ -65,7 +57,7 @@ setup(
     include_package_data=True,
     platforms='any',
     install_requires=requirements,
-    extra_requirements=extra_requirements,
+    extras_require=extra_requirements,
     classifiers=[
         'Environment :: Web Environment',
         'Intended Audience :: Developers',

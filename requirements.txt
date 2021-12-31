@@ -1,7 +1,0 @@
-Quart
-pyjwt
-aiohttp
-oauthlib
-cachetools
-setuptools
-Async-OAuthlib
