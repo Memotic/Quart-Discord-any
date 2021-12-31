@@ -36,10 +36,10 @@ class DiscordOAuth2HttpClient(abc.ABC):
         self.locks_cache = locks_cache
         self.locksmith_lock = asyncio.Lock() if locks_cache is not None else None
 
-        if not issubclass(self.users_cache.__class__, Mapping):
+        if users_cache and not issubclass(users_cache.__class__, Mapping):
             raise ValueError("Instance users_cache must be a mapping like object.")
 
-        if "http://" in self.redirect_uri:
+        if redirect_uri and "http://" in redirect_uri:
             os.environ["OAUTHLIB_INSECURE_TRANSPORT"] = "true"
 
         if app is not None:
